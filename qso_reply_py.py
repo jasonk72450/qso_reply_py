@@ -9,25 +9,25 @@ def print_and_write_file(_id, content):
 
 
 def generate_all():
-    other_call = input("Callsign to reply to: ").upper()
-    rst = input("Enter their RST: ")
-    other_name = input("Name of contact: ").upper()
-    wx = input("Weather: ").upper()
-    temperature = input("Enter the temperature: ")
+    other_call_reply = input("Callsign to reply to: ").upper()
+    rst_reply = input("Enter their RST: ")
+    other_name_reply = input("Name of contact: ").upper()
+    wx_reply = input("Weather: ").upper()
+    temperature_reply = input("Enter the temperature: ")
 
-    text1 = protocol_1(other_call, rst, other_name)
+    text1 = protocol_1(other_call_reply, rst_reply, other_name_reply)
     print_and_write_file(1, text1)
 
-    text2 = protocol_2(other_call, wx, temperature)
+    text2 = protocol_2(other_call_reply, wx_reply, temperature_reply)
     print_and_write_file(2, text2)
 
-    text3 = protocol_3(other_call)
+    text3 = protocol_3(other_call_reply)
     print_and_write_file(3, text3)
 
-    text4 = protocol_4(other_call)
+    text4 = protocol_4(other_call_reply)
     print_and_write_file(4, text4)
 
-    text5 = protocol_5(other_call, other_name)
+    text5 = protocol_5(other_call_reply, other_name_reply)
     print_and_write_file(5, text5)
 
 
